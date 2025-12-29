@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivangi Sharma | Data Engineer & AI Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+        }
+
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .section-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="text-slate-200 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                SS.
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-sm font-medium hover:text-blue-400 transition-colors">Home</a>
+                <a href="#experience" class="text-sm font-medium hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#projects" class="text-sm font-medium hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#skills" class="text-sm font-medium hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#education" class="text-sm font-medium hover:text-blue-400 transition-colors">Education</a>
+            </div>
+            <div class="flex items-center space-x-5">
+                <a href="mailto:shivangi997sharma@gmail.com" class="text-slate-400 hover:text-white transition-colors" title="Contact Me">
+                    <i class="fas fa-envelope text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="pt-40 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                <span>Currently at Comerica Bank</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                Shivangi <span class="text-blue-500">Sharma</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed mb-8">
+                Data Engineer & AI Specialist. Architecting high-performance ETL pipelines and intelligent systems to solve complex data challenges.
+            </p>
+            <div class="flex flex-wrap gap-6 text-slate-400 mb-10 text-sm">
+                <span class="flex items-center"><i class="fas fa-map-marker-alt text-blue-400 mr-2"></i> Frisco, TX</span>
+                <span class="flex items-center"><i class="fas fa-phone text-blue-400 mr-2"></i> (540) 915-8945</span>
+                <span class="flex items-center"><i class="fas fa-envelope text-blue-400 mr-2"></i> shivangi997sharma@gmail.com</span>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <a href="#experience" class="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all shadow-lg shadow-blue-600/20">
+                    View My Work
+                </a>
+                <button onclick="window.print()" class="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg transition-all border border-slate-700">
+                    Save as PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="py-16 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="flex items-start space-x-4">
+                <div class="p-3 bg-blue-500/10 rounded-xl"><i class="fas fa-database text-blue-400 text-xl"></i></div>
+                <div>
+                    <h3 class="text-white font-bold">Data Engineering</h3>
+                    <p class="text-slate-400 text-sm">ETL pipelines, Snowflake, AWS, and Informatica IDMC.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <div class="p-3 bg-emerald-500/10 rounded-xl"><i class="fas fa-robot text-emerald-400 text-xl"></i></div>
+                <div>
+                    <h3 class="text-white font-bold">Gen AI & ML</h3>
+                    <p class="text-slate-400 text-sm">Building with Lambda, TensorFlow, and NLP methodologies.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <div class="p-3 bg-purple-500/10 rounded-xl"><i class="fas fa-shield-alt text-purple-400 text-xl"></i></div>
+                <div>
+                    <h3 class="text-white font-bold">Compliance</h3>
+                    <p class="text-slate-400 text-sm">Expertise in HIPAA, GLBA, AML, and KYC standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 section-reveal">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <i class="fas fa-briefcase text-blue-400 mr-4"></i> Professional Experience
+            </h2>
+            <div class="space-y-12">
+                <!-- Comerica -->
+                <div class="relative pl-8 border-l border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-950"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white">Data Engineer I</h3>
+                        <span class="text-blue-400 font-semibold">Oct 2024 - Present</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4">Comerica Bank <span class="text-slate-600 px-2">|</span> Frisco, TX</p>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Architected end-to-end ETL pipelines (Informatica IDMC, PowerCenter) migrating legacy AFS Level III loan data to AFSVision platform.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Integrated Snowflake, Dremio, and AWS S3 architecture to build a unified data catalog, increasing refresh speeds by 60%.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Led AML & KYC Data Quality Mapping Project using Informatica and SQL-based data pipelines to ensure completeness and accuracy of customer data.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Developed Power BI dashboards and enterprise-wide reporting analytics for near real-time loan portfolio monitoring.</li>
+                    </ul>
+                </div>
+
+                <!-- IU -->
+                <div class="relative pl-8 border-l border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-700 rounded-full border-4 border-slate-950"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white">Assistant Instructor</h3>
+                        <span class="text-blue-400 font-semibold">Aug 2022 - May 2024</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4">Indiana University <span class="text-slate-600 px-2">|</span> Bloomington, IN</p>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Taught AI methodologies and foundational algorithms to 200+ graduate students.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Mentored students in building AI-driven applications using TensorFlow and scikit-learn.</li>
+                    </ul>
+                </div>
+
+                <!-- Optum -->
+                <div class="relative pl-8 border-l border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-700 rounded-full border-4 border-slate-950"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white">Software Development Engineer</h3>
+                        <span class="text-blue-400 font-semibold">Jul 2020 - Aug 2022</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4">Optum (United Health Group) <span class="text-slate-600 px-2">|</span> Gurgaon, India</p>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Modernized Optum Medicaid Management System using Azure CI/CD pipelines and Python.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Developed Python and MongoDB frameworks for efficient processing and validation of EDI files for members and claims.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Designed Python and Robot Framework automation frameworks processing 500K+ monthly claims.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Ensured HIPAA compliance by designing complex SQL queries for ETL validation.</li>
+                    </ul>
+                </div>
+
+                <!-- Stratbeans -->
+                <div class="relative pl-8 border-l border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-700 rounded-full border-4 border-slate-950"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white">Technical Intern</h3>
+                        <span class="text-blue-400 font-semibold">May 2019 - Dec 2019</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4">Stratbeans Learning Solutions <span class="text-slate-600 px-2">|</span> Gurgaon, India</p>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Supported SDLC and CI/CD deployment of custom LMS platforms for enterprise clients like TATA and HDFC.</li>
+                        <li class="flex items-start"><i class="fas fa-chevron-right text-blue-500 text-[10px] mt-1 mr-3 shrink-0"></i> Developed back-end integrations and managed Git-based version control workflows.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-24 px-6 bg-slate-900/20 section-reveal">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <i class="fas fa-code-branch text-blue-400 mr-4"></i> Featured Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/30 transition-all">
+                    <div class="flex justify-between mb-6">
+                        <i class="fas fa-sign-language text-3xl text-blue-400"></i>
+                        <span class="text-xs text-slate-500 font-bold uppercase">NLP / ML</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Sign Language Translator</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Trilingual deep learning model translating ASL, German, and Indian sign gestures using MediaPipe.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-[10px] font-bold bg-slate-800 text-slate-300 rounded">Python</span>
+                        <span class="px-2 py-1 text-[10px] font-bold bg-slate-800 text-slate-300 rounded">OpenCV</span>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/30 transition-all">
+                    <div class="flex justify-between mb-6">
+                        <i class="fas fa-file-medical-alt text-3xl text-emerald-400"></i>
+                        <span class="text-xs text-slate-500 font-bold uppercase">Health Tech</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">COVID-19 X-Ray Predictor</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Automated diagnostics system utilizing CNN models and Flask to identify pneumonia from medical imaging.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-[10px] font-bold bg-slate-800 text-slate-300 rounded">TensorFlow</span>
+                        <span class="px-2 py-1 text-[10px] font-bold bg-slate-800 text-slate-300 rounded">Flask</span>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/30 transition-all">
+                    <div class="flex justify-between mb-6">
+                        <i class="fas fa-bolt text-3xl text-purple-400"></i>
+                        <span class="text-xs text-slate-500 font-bold uppercase">Performance</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">NextJS Edge Optimization</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Research and implementation for optimizing serverless functions via Vercel Edge Runtime.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-[10px] font-bold bg-slate-800 text-slate-300 rounded">Next.js</span>
+                        <span class="px-2 py-1 text-[10px] font-bold bg-slate-800 text-slate-300 rounded">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 section-reveal">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Technical Stack</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <!-- Skill Group -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-blue-500 uppercase tracking-widest">Data & Cloud</h4>
+                    <div class="flex flex-col gap-2">
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">AWS</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Snowflake</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Dremio</span>
+                    </div>
+                </div>
+                <!-- Skill Group -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-blue-500 uppercase tracking-widest">Engineering</h4>
+                    <div class="flex flex-col gap-2">
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Python</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Java / SQL</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">ETL / ELT</span>
+                    </div>
+                </div>
+                <!-- Skill Group -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-blue-500 uppercase tracking-widest">AI/ML</h4>
+                    <div class="flex flex-col gap-2">
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Gen AI</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Lambda</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">TensorFlow</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">NLP</span>
+                    </div>
+                </div>
+                <!-- Skill Group -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-blue-500 uppercase tracking-widest">DevOps</h4>
+                    <div class="flex flex-col gap-2">
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Azure DevOps</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Git CI/CD</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">JIRA</span>
+                    </div>
+                </div>
+                <!-- Skill Group -->
+                <div class="space-y-4">
+                    <h4 class="text-xs font-bold text-blue-500 uppercase tracking-widest">Tools</h4>
+                    <div class="flex flex-col gap-2">
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Informatica IDMC</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Power BI</span>
+                        <span class="skill-tag text-sm text-slate-400 bg-slate-900/50 p-2 rounded">Collibra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-6 bg-slate-950 section-reveal">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <i class="fas fa-graduation-cap text-blue-400 mr-4"></i> Education & Certs
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <!-- IU -->
+                    <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+                        <h3 class="font-bold text-white text-lg">MS in Computer Science</h3>
+                        <p class="text-blue-400">Indiana University Bloomington</p>
+                        <p class="text-slate-500 text-sm mt-1">2022 - 2024</p>
+                    </div>
+                    <!-- NorthCap -->
+                    <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
+                        <h3 class="font-bold text-white text-lg">B.Tech in CS & Engineering</h3>
+                        <p class="text-blue-400">The NorthCap University, India</p>
+                        <p class="text-slate-500 text-sm mt-1">2016 - 2020</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-slate-300 font-bold mb-4 uppercase tracking-widest text-xs">Professional Credentials</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center p-3 rounded-lg bg-slate-900 border border-slate-800 text-sm">
+                            <i class="fas fa-certificate text-emerald-400 mr-3"></i> Product Management (University of Maryland)
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-slate-900 border border-slate-800 text-sm">
+                            <i class="fas fa-certificate text-emerald-400 mr-3"></i> Data Science Fundamentals
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-slate-900 border border-slate-800 text-sm">
+                            <i class="fas fa-certificate text-emerald-400 mr-3"></i> Relational Databases (SQL)
+                        </div>
+                        <div class="flex items-center p-3 rounded-lg bg-slate-900 border border-slate-800 text-sm">
+                            <i class="fas fa-certificate text-emerald-400 mr-3"></i> Crux Data Structures
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs">
+            <p>© 2025 Shivangi Sharma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-nav', 'py-4', 'border-b', 'border-slate-800');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('glass-nav', 'py-4', 'border-b', 'border-slate-800');
+                nav.classList.add('py-6');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-reveal').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
